@@ -1,0 +1,157 @@
+.gallery {
+  margin-top: 80px;
+
+  &__wrap {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+
+  }
+
+  &__item {
+    max-width: 476px;
+
+    img {
+      max-width: 100%;
+    }
+
+    &:nth-of-type(3) {
+      background: #FF7E1A;
+
+      &:hover {
+        background: #FFF5E5;
+      }
+    }
+
+    &:nth-of-type(5) {
+      background: #FFA50E;
+
+      &:hover {
+        background: #FFF5E5;
+      }
+    }
+  }
+
+  &__item-text {
+    color: #fff;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 100%;
+    line-height: 1.3;
+
+    &:hover {
+      color: #FF7E1A;
+    }
+
+    .quote-icon {
+      align-self: flex-start;
+      font-size: 24px;
+    }
+
+    .quote-text {
+      font-family: @fontMerriweather;
+      font-size: 20px;
+    }
+
+    .quote-author {
+      align-self: flex-end;
+      font-family: @fontOswald;
+      font-size: 18px;
+      text-transform: uppercase;
+      font-weight: 500;
+    }
+  }
+}
+
+@media (min-width: 945px) and (max-width: 1300px) {
+  .gallery {
+    margin-top: 30px;
+
+    &__item-text {
+      padding: 20px;
+
+      .quote-icon {
+        align-self: flex-start;
+        font-size: 24px;
+      }
+
+      .quote-text {
+        font-family: @fontMerriweather;
+        font-size: 16px;
+      }
+
+      .quote-author {
+        font-size: 16px;
+      }
+    }
+  }
+}
+
+@media (min-width: 481px) and (max-width: 944px) {
+  .gallery {
+    margin-top: 50px;
+
+    &__wrap {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(4, 1fr);
+
+    }
+
+    &__item {
+      max-height: 250px;
+    }
+
+    &__item-text {
+      padding: 20px;
+
+      .quote-icon {
+        font-size: 24px;
+      }
+
+      .quote-text {
+        font-size: 16px;
+      }
+
+      .quote-author {
+        font-size: 16px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .gallery {
+    margin-top: 30px;
+    overflow: hidden;
+
+    &__wrap {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(8, 200px);
+    }
+
+    &__item {
+      max-height: 250px;
+    }
+
+    &__item-text {
+      padding: 20px;
+
+      .quote-icon {
+        font-size: 18px;
+      }
+
+      .quote-text {
+        font-size: 18px;
+      }
+
+      .quote-author {
+        font-size: 15px;
+      }
+    }
+  }
+}

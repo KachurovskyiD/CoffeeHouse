@@ -1,0 +1,168 @@
+.team {
+  margin-top: 80px;
+  padding: 10px 30px;
+
+  &__row {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__text {
+    text-align: center;
+  }
+
+  &__founder {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 30px;
+    align-items: center;
+    justify-items: center;
+    margin-bottom: 50px;
+  }
+
+  &__founder-img {
+    max-width: 500px;
+    min-width: 250px;
+
+    img {
+      max-width: 100%;
+    }
+  }
+
+  &__owners {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 50px;
+    align-items: center;
+    justify-items: center;
+  }
+
+  &__owner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  &__owner-img {
+    overflow: hidden;
+    border-radius: 50%;
+    max-width: 280px;
+    // min-width: 320px;
+
+    img {
+      max-width: 100%;
+    }
+  }
+
+  &__owner-name {
+    font-size: 18px;
+    margin-top: 30px;
+  }
+
+  .owner-social__item {
+    .fab {
+      margin: 20px 7px 15px;
+    }
+  }
+
+  &__owner-description {
+    min-height: 70px;
+  }
+
+  .fab {
+    font-size: 22px;
+    color: #ff7000;
+    margin: 20px 15px 15px 0;
+
+    &:hover {
+      color: #7E4930;
+    }
+  }
+}
+
+@media (min-width: 768px) and (max-width: 950px) {
+  .team {
+    margin-top: 160px;
+    padding: 10px 30px;
+
+    &__owner-name {
+      font-size: 16px;
+      margin-top: 30px;
+    }
+
+    .owner-social__item {
+      .fab {
+        margin: 10px 7px 15px;
+      }
+    }
+
+    .fab {
+      margin: 10px 10px 15px 0;
+      font-size: 16px;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .team {
+    margin-top: 50px;
+    padding: 30px;
+
+    &__founder {
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 300px;
+      grid-gap: 15px;
+      align-items: center;
+      justify-items: center;
+      margin-bottom: 30px;
+      text-align: center;
+
+      &-text {
+        max-width: 650px;
+      }
+
+      .founder__description {
+        text-align: left;
+      }
+    }
+
+    &__owners {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(3, 1fr);
+      grid-gap: 30px;
+      align-items: center;
+      justify-items: center;
+    }
+
+    &__owner {
+      border: 2px solid #ff6f004f;
+      padding: 10px;
+      border-radius: 5px;
+      max-width: 360px;
+
+      &:hover {
+        border: 2px solid #ff6f00;
+      }
+    }
+
+    &__owner-name {
+      font-size: 16px;
+      margin-top: 30px;
+    }
+
+    .owner-social__item {
+      .fab {
+        margin: 10px 7px 15px;
+      }
+    }
+
+    .fab {
+      margin: 10px 10px 15px 0;
+      font-size: 16px;
+    }
+  }
+}

@@ -1,0 +1,161 @@
+.poster {
+  background-image: url('../img/poster-bg.png');
+  min-height: 916px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+
+  &__scene {
+    position: relative;
+    top: 170px;
+    text-align: center;
+  }
+
+  &__scene-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 70px;
+    color: #ffffff;
+    max-width: 630px;
+    margin-left: 15%;
+
+    .scene-title {
+      font-weight: 500;
+      font-family: @fontOswald;
+      font-size: 30px;
+      text-transform: uppercase;
+      text-shadow: -2px 6px 5px rgba(148, 73, 11, 0.548);
+    }
+
+    .scene-subtitle {
+      font-size: 16px;
+      letter-spacing: 0px;
+      margin: 35px 0;
+      line-height: 25px;
+    }
+
+    .scene-btn {
+      font-weight: 700;
+      color: #464242;
+      background-color: #fff;
+      border-color: transparent;
+      padding: 15px 45px;
+      border-radius: 5px;
+      border-bottom: 2px solid rgb(206, 101, 3);
+
+      &:hover {
+        border-bottom: 2px solid #fff;
+        background-color: #683A2C;
+        color: #fff;
+        box-shadow: 0px 10px 14px 0px rgba(255, 255, 255, 0.75);
+      }
+    }
+  }
+
+  &__scene-decoration {
+    position: absolute;
+    bottom: -135px;
+    right: -270px;
+    max-width: 350px;
+
+    img {
+      max-width: 100%;
+    }
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1040px) {
+  .poster {
+    min-height: 567px;
+
+    &__scene {
+      top: 170px;
+    }
+
+    &__scene-img {
+      position: relative;
+      left: 0px;
+      top: -30px;
+      max-width: 370px;
+
+      img {
+        max-width: 100%;
+      }
+    }
+
+    &__scene-text {
+      margin-top: 0px;
+      max-width: 300px;
+      margin-left: 0%;
+
+      .scene-title {
+        font-size: 25px;
+      }
+
+      .scene-subtitle {
+        font-size: 14px;
+        letter-spacing: 0px;
+        margin: 35px 0;
+        line-height: 20px;
+      }
+    }
+
+    &__scene-decoration {
+      position: absolute;
+      bottom: 30px;
+      right: -200px;
+      max-width: 250px;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .poster {
+    min-height: 791px;
+
+    &__scene {
+      top: 205px;
+    }
+
+    &__scene-img {
+      position: relative;
+      left: 0px;
+      top: -10px;
+      max-width: 350px;
+
+      img {
+        max-width: 100%;
+      }
+    }
+
+    &__scene-text {
+      margin-top: 0px;
+      max-width: 300px;
+      margin-left: 5%;
+
+      .scene-title {
+        font-size: 20px;
+        position: relative;
+        top: 10px;
+      }
+
+      .scene-subtitle {
+        font-size: 13px;
+        letter-spacing: 0px;
+        margin: 20px 0;
+        line-height: 20px;
+      }
+    }
+
+    &__scene-decoration {
+      position: absolute;
+      bottom: -295px;
+      right: 5px;
+      max-width: 310px;
+      padding-left: 10px;
+    }
+  }
+}
